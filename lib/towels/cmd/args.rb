@@ -1,31 +1,35 @@
 require 'optparse'
 module Towels::Cmd
-#   # The actual options will be stored in this hash
-#   Options = Struct.new(:name)
+  module Args
+  
+    # The actual options will be stored in this hash
 
-  Class Args 
-#   def sel.parse(options)
-#       args = Options.new("#{self.to_s.split('::')[-1]}")
 
-#       # Set up the options you are looking for
-#       opt_parser = OptionParser.new do |parser|
-#           parser.banner = "Usage: #{$0} [options] ..."
+    def Args.parse(options)
+      args = {} 
+      #Options = {}
+      #Options.new("#{self.to_s.split('::')[-1]}")
+
+      # Set up the options you are looking for
+      opt_parser = OptionParser.new do |parser|
+          parser.banner = "Usage: #{$0} [options] ..."
     
-#           parser.on("-c", "--cmd", "default option, run command") do |n|
-#             args.name = n
-#           end
+          parser.on("-c", "--cmd CMDOPTS", "default option, run command") { |n| args[:cmd] = n }
+
+          parser.on("-g", "--gui", "run the Towels gui") { |n| args[:gui] = true }
     
-#           parser.on("-h", "--help", "Prints this help") do
-#             puts parser
-#             exit
-#           end
-#         end
+          parser.on("-h", "--help", "Prints this help") do
+            puts parser
+            exit
+          end
+        end
 
-#       # The parse! method also removes any options it finds from ARGV.
-#       opt_parser.parse!(options)
-#       return args
-#   end
-  end
+      # The parse! method also removes any options it finds from ARGV.
+      opt_parser.parse!
+      return args
+    end #parse
 
+  end #Args
 
-end
+end #cmd
+
