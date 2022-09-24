@@ -10,6 +10,7 @@ end
 
 def main
   options = Towels::Cmd::Args.parse %w[--help]
+  
 end
 
 if __FILE__ == $0
