@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description =  "start with a simple dsl driven gui framework for ruby like shoes3, then add other simple wrappers"
   spec.homepage = "https://github.com/lexlapax/ruby-towels" 
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 2.6.0"
+  spec.required_ruby_version = ">= 3.1.2"
 
   spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
 
