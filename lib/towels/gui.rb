@@ -1,4 +1,4 @@
-require_relative "gui/top_window"
+require_relative "gui/towels_app"
 
 module Towels::Gui
 

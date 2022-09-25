@@ -12,7 +12,7 @@ end
 def main
   options = Towels::Cmd::Args.parse %w[--help]
   if options.has_key?(:gui) 
-    Towels::Gui::TopWindow.new.launch
+    Towels::Gui::TowelsApp.new.launch
   end
 end
 
